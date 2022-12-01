@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <link rel="stylesheet" href="../css/task2.css">
+</head>
+<body>
+<div class="container">
+    <ul class="top-menu">
+        <li class="top-menu_item"><a href="#" class="top-menu_link">пункт</a></li><li class="top-menu_item"><a href="#" class="top-menu_link">пункт</a></li><li class="top-menu_item"><a href="#" class="top-menu_link">пункт</a></li><li class="top-menu_item"><a href="#" class="top-menu_link">пункт</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    let headingElement = document.querySelectorAll('.top-menu_item')
+    for (let i = 0; i <headingElement.length; i++) {
+        let currentEl = headingElement[i]
+        currentEl.style.width = Math.round(100 / headingElement.length) + '%'
+    }
+</script>
+</body>
+</html>

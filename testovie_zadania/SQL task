@@ -1,0 +1,17 @@
+Задание SQL
+
+1.
+
+SELECT value FROM property_value
+INNER JOIN property ON property_value.property_id = property.id
+INNER JOIN product ON property_value.product_id = product.id
+WHERE product_id = 2
+
+2)
+SELECT prt.name, COUNT(pv.property_id) AS prtcnt
+FROM property prt
+         INNER JOIN property_value pv ON prt.id = pv.property_id
+         INNER JOIN product p ON pv.product_id = p.id
+WHERE p.category_id = 2
+GROUP BY pv.property_id
+HAVING prtcnt = 1;
